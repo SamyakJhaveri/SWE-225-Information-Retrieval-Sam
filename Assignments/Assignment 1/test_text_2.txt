@@ -1,0 +1,2 @@
+If the trip is cancelled an 5 minutes after the driver-partner is confirmed has 
+confirmed the request, a cancelation fee will apply.

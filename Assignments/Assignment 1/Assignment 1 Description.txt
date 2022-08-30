@@ -1,0 +1,141 @@
+This assignment is to be done individually. You cannot use code written by your 
+classmates. Use code found over the Internet at your own peril -- 
+it may not do exactly what the assignment requests. If you do end up using 
+code you find on the Internet, you must disclose the origin of the code. 
+Concealing the origin of a piece of code is plagiarism. Use Ed Discussions for 
+general questions whose answers can benefit you and everyone.
+
+ 
+
+General Specifications
+
+You must write this assignment in Python (preferably 3.6+, as this is installed in the openlab.ics.uci.edu machines).
+Make sure to break down your program into classes/methods/functions corresponding to the parts in this specification. They will be tested separately.
+The function signatures in this specification are informal; their purpose is to explain the inputs and outputs of the methods.
+Very important: At certain points, the assignment may be underspecified - this is by design. In those cases, make your own choices and assumptions and be prepared to defend them in case you are questioned about them.
+ 
+
+ Part A: Word Frequencies  (40 points)
+
+1) Method/Function: List<Token> tokenize(TextFilePath)
+Write a method/function that reads in a text file and returns a list of the tokens in that file. 
+For the purposes of this project, a token is a sequence of alphanumeric characters along with a few 
+special characters [a-zA-Z0-9@#*&'], independent of capitalization (so Apple, apple, aPpLe are the same 
+token). You are allowed to use regular expressions if you wish to (and you can use some regexp engine, 
+no need to write it from scratch), but you are not allowed to import a tokenizer (e.g. from NLTK), 
+since you are being asked to write a tokenizer.
+
+2) Method:  Map<Token,Count> computeWordFrequencies(List<Token>)
+Write another method/function that counts the number of occurrences of each token in the token list. 
+Remember that you should write this assignment yourself from scratch so you are not allowed to import a 
+counter when the assignment asks you to write that method.
+
+3) Method:  def print(Frequencies<Token, Count>)
+Finally, write a method that prints out the word frequency count onto the screen. The print out should 
+be ordered by decreasing frequency (so, the highest frequency words first). 
+
+The TA will use their own test text files. For this part, it is expected that your program will read 
+this text file, tokenize it, count the tokens, and print out the token (word) frequencies. Your program 
+must run from the command line: write a program that takes one text file as an argument and outputs the 
+token frequencies.
+
+Please, use one of the output formats when you print out the result: 
+
+<token>\t<freq>
+<token> <freq>
+<token> - <freq>
+<token> = <freq>
+<token> > <freq>
+<token> -> <freq>
+<token> => <freq>
+
+ 
+
+Part B: Intersection of two files (60 points)
+
+Write a program that takes two text files from the command line as arguments and outputs the number of 
+tokens they have in common. Here is an example of input/output:
+
+Example Input.png
+
+You can reuse the code you wrote for part A (remember that you can import files, avoiding thus code 
+duplication!).
+The TA will use their own text files. Note that some of the text files may be VERY LARGE, so make sure 
+that your program is not dependent on reading the entire files to the computer RAM. 
+For this part, programs that perform better will be given more credit than those that perform poorly.
+ 
+
+Common Tasks and important notes
+
+For both part A and part B, please add a brief runtime complexity explanation for your code as a 
+comment on top of each method or function (does it run in linear time relative to the size of the input? 
+Polynomial-time? Exponential-time? ). This explanation and your code's actual conformance with this 
+explanation will be the basis for evaluating the performance of your program.
+You should get the file names from command line arguments. "Do not hard code" the input file names in 
+your code or read them from system standard input (stdin). As the assignment will be graded using an 
+automatic grader, not doing this may result in losing the whole credit for the assignment.
+Exception handling is required for bad inputs. An example of bad input would be a character in a 
+non-English language. Your code should be able to tokenize the whole input file even though there may 
+be some bad inputs in it without crashing. You should be able to skip the bad input and continue with 
+the rest. If your code throws an exception in the middle of tokenizing a TA's input test case, you will 
+lose the whole credit for that test case.
+You should not import something that will make your assignment methods become one-liners. Mandatory 
+reading: LINK. (Links to an external site.)
+You can play with and test your code using text files from https://www.gutenberg.org/ (Links to an 
+external site.) . Perhaps it could be good for you to decide together with some other student which 
+text(s) to use while testing your (individual!) codes and compare them in terms of the underlying 
+assumptions of your tokenizers (if any), their results, and efficiencies.
+ 
+
+Submitting Your Assignment
+
+Your submission must be a single zip file containing two programs, one for part A, the other for part B. 
+Something like this:
+
+Assignment1.zip
+------------ PartA.py
+------------ PartB.py
+
+Submit it via Canvas.
+
+You can replace Assignment1 with whatever name you think is appropriate. You don't need to add your 
+UCInetID or student number to the zip file name. Canvas will do that automatically when we are 
+downloading your assignments. Do not zip the directory containing these two files! So the following 
+examples are not a correct structure:
+
+Assignment1.zip
+------------ Assignment 1
+------------------------ PartA.py
+------------------------ PartB.py
+
+Assignment1.zip
+------------  PartA
+------------------------ PartA.py
+------------ PartB
+------------------------ PartB.py
+
+This is necessary as the automatic grader will only work with the required structure. Again, please 
+pay attention that you only need to upload ONE zip file containing the two python files shown above 
+and not one zip file for each part.
+
+ 
+
+Grading Process
+
+The correctness of your programs will be evaluated against a set of test cases using an automated 
+grader. If necessary the results will be reviewed by a TA or Reader as well. Then, your source code 
+will be evaluated by a TA or Reader for Understandability and Performance.
+
+ 
+
+Evaluation Criteria
+
+Your assignment will be graded on the following four criteria.
+
+Correctness (40%)
+How well does the behavior of the program match the specification?
+How does your program handle bad input?
+Understanding (30%)
+Do you demonstrate an understanding of the code?
+Efficiency (30%)
+How efficiently does the program work on large inputs?

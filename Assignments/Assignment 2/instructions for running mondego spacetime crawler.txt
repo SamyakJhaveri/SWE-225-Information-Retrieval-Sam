@@ -1,0 +1,26 @@
+1) Use 
+`ssh samyaknj@openlab.ics.uci.edu` 
+in terminal to connect to the OpenLab Server via ssh
+Password is 'Ironman@27'
+
+2) Go to the directory named 'webcrawler' using ls and cd commands
+
+3) Once in the directory, activate the `crawl_env` virtual machine using the command:
+        python3 -m crawl_env/bin/activate
+
+TO RUN A CODE IN THE DIRECTORY:
+4) python3 launch.python3
+
+TO EDIT A CODE IN THE DIRECTORY:
+4) use 
+        vim <filename>
+    to open the vim editor to edit the file
+
+5) Once the file is open in the vim editor (in the terminal window) press the letter i to insert into the file
+
+6) Make the changes in the file
+
+7) Press 'Esc' key to come out of the vim editor and press 'CapsLock + zz' to save the file with the changes 
+you made to it.
+
+8) Run the the code
