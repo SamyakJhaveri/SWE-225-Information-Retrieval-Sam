@@ -1,8 +1,9 @@
 # SWE-225-Information-Retreival-Web-Crawler
 Files and instructions about Web Crawler Project built as a capstone of the SWE Information Retrieval Course of Winter 2022 Quarter at UCI taken by Prof. Pramit Choudhary
 
-# SWE-225-Information-Retrieval
-Assignments and Projects as submissions to the SWE 225 Information Retrieval Course taken in Winter 2022
+# Navigating to the Web Crawler Code
+The final version of the Web Crawler code can be found in the the "Assignments > Assignment 3 Milestone 3" file path. This also has the final documents and screenshots of what the final result was obtained and eventually submitted as the capstone project for this course. 
+
 
 Course and Assignment Instructions:
 # SWE-225-Web-Crawler
